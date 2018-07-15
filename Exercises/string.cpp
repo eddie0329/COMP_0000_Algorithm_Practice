@@ -4,14 +4,19 @@
 using namespace std;
 
 int main() {
-  string a = "abcd";
-  string b = "ef";
+  string a = "";
+  cin>>a;
+  string b = "";
+  cin>>b;
   string c = a + b;
-
-
+  string d = b[0] + a.substr(1);
+  string f = a[0] + b.substr(1);
 
   cout<<a.size()<<SPACEBAR<<b.size()<<endl;
   cout<<c<<endl;
+
+
+  cout<<d<<SPACEBAR<<f<<endl;
 
   return 0;
 }
