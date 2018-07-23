@@ -3,8 +3,8 @@
 using namespace std;
 
 int main () {
-  string a = "abc";
-  string b = "cde";
+  string a = "cde";
+  string b = "abc";
   string c = " "; // "c"
   int number = 0;
   int result = 0;
