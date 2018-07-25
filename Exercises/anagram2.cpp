@@ -1,29 +1,32 @@
 #include <iostream>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 int main () {
   string a = "cde";
-  string b = "bcfc";
-  string c = "";
-  //string d = " "; // "abcde"
-  int number = 0;
-  // int dual = 0;
-  int result = 0;
+  string b = "cccs";
+  int maxKept = 0;
+  int answer = 0;
 
-  for(int i = 0; i < a.size(); i++) {
-    for(int j = 0; j < b.size(); j++) {
-      if(a[i] == b[j]) {
-        number++;
-        c.resize(number);
-      }
-      if(c == c) {
-        number --;
-        c.resize(number);
+  vector<char> tempVecA(a.begin(), a.end());
+  vector<char> tempVecB(b.begin(), b.end());
+  int maxLose = (tempVecA.size() + tempVecB.size());
+
+  for(vector<char>::iterator iterA = tempVecA.begin(); iterA != tempVecA.end(); ++iterA) {
+    for(vector<char>::iterator iterB = tempVecB.begin(); iterB != tempVecB.end(); ++iterB ) {
+      if(*iterA == *iterB) {
+        maxKept ++;
+        *iterB = 0;
+        break;
       }
     }
   }
-  cout<<c.size()<<endl;
+  answer = maxLose - 2*maxKept;
 
-  return 0;
+  cout<<"MAXKEPT:"<<maxKept<<endl;
+  cout<<"MAXLOSE:"<<maxLose<<endl;
+  cout<<answer<<endl;
+  return answer;
 }
