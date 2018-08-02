@@ -25,7 +25,7 @@ int main () {
   }
   answer = maxLose - 2*maxKept;
 
-  cout<<"MAXKEPT:"<<maxKept<<endl;
+  cout<<"MAXKEPT:"<<maxKept<<endl; 
   cout<<"MAXLOSE:"<<maxLose<<endl;
   cout<<answer<<endl;
   return answer;

@@ -15,7 +15,7 @@ int main() {
   cout<<a.size()<<SPACEBAR<<b.size()<<endl;
   cout<<c<<endl;
 
-
+  strcpy(a, b);
   cout<<d<<SPACEBAR<<f<<endl;
 
   return 0;
