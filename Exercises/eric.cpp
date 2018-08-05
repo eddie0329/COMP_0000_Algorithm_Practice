@@ -4,31 +4,31 @@
 using namespace std;
 
 
-vector<string> move(vector <string> f, vector <string> s, string a) {
-  for(int i = 0; i < f.size(); i++) {
-    if(f[i] == a) {
-      s.push_back(f[i]);
+//moving elements to second_room
+void move(vector <string> first_room, vector <string> second_room, string a) {
+  for(int i = 0; i < first_room.size(); i++) {
+    if(first_room[i] == a) {
+      second_room.push_back(first_room[i]);
     }
   }
-  return s;
 }
 
 
 
 int main() {
-  vector <string> first;
-  vector <string> second;
+  vector <string> first_room;
+  vector <string> second_room;
   string a = "Eric";
 
-  first.push_back("Eric");
-  first.push_back("Snake");
-  first.push_back("Rabbit");
-  first.push_back("Bread");
+  first_room.push_back("Eric");
+  first_room.push_back("Snake");
+  first_room.push_back("Rabbit");
+  first_room.push_back("Bread");
 
-  cout<<first[0]<<endl;
+  cout<<first_room[0]<<endl;
 
-  move(first, second, a);
+  move(first_room, second_room, a);
 
-  cout<<second[0]<<endl;
+  cout<<second_room[0]<<endl;
 
 }
