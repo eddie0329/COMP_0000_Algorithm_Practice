@@ -69,7 +69,7 @@ int main() {
 
         //Rabbit --- Eric, Bread, Snake           -> Rabbit, Eric --- Bread, Snake
         else if(first_room[i] != "Eric" && first_room[i] == "Rabbit" && first_room[i] != "Snake" && first_room[i] != "Bread") {
-          move(first_room, second_room, "Eric");
+          move(second_room, first_room, "Eric");
           continue;
         }
 
