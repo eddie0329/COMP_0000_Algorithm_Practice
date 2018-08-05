@@ -43,38 +43,44 @@ int main() {
     }
     else {
       for(int i = 0; i < first_room.size(); i ++) {
-        // Snake, Bread --- Eric, Rabbit     ->     Eric, Snake, Bread --- Rabbit
-        if(first_room[i] != "Eric" && first_room[i] != "Rabbit" && first_room[i] == "Snake" && first_room[i] == "Bread") {
+        // Snake, Bread --- Eric, Rabbit   ->   Eric, Snake, Bread --- Rabbit
+        if(first_room[i] != "Eric" && first_room[i] != "Rabbit"
+           && first_room[i] == "Snake" && first_room[i] == "Bread") {
           move(second_room, first_room, "Eric");
           continue;
         }
 
-        //Eric, Snake, Bread --- Rabbit        -> Bread --- Eric, Snake, Rabbit
-        else if(first_room[i] == "Eric" && first_room[i] != "Rabbit" && first_room[i] == "Snake" && first_room[i] == "Bread") {
+        //Eric, Snake, Bread --- Rabbit    -> Bread --- Eric, Snake, Rabbit
+        else if(first_room[i] == "Eric" && first_room[i] != "Rabbit"
+                && first_room[i] == "Snake" && first_room[i] == "Bread") {
           move(first_room, second_room, "Eric", "Snake");
           continue;
         }
 
-        //Bread --- Eric, Snake, Rabbit         -> Eric, Rabbit, Bread --- Snake
-        else if(first_room[i] != "Eric" && first_room[i] != "Rabbit" && first_room[i] != "Snake" && first_room[i] == "Bread") {
+        //Bread --- Eric, Snake, Rabbit     -> Eric, Rabbit, Bread --- Snake
+        else if(first_room[i] != "Eric" && first_room[i] != "Rabbit"
+                && first_room[i] != "Snake" && first_room[i] == "Bread") {
           move(second_room, first_room, "Eric", "Rabbit");
           continue;
         }
 
-        //Eric, Rabbit, Bread --- Snake          -> Rabbit --- Eric, Bread, Snake
-        else if(first_room[i] == "Eric" && first_room[i] == "Rabbit" && first_room[i] != "Snake" && first_room[i] == "Bread") {
+        //Eric, Rabbit, Bread --- Snake      -> Rabbit --- Eric, Bread, Snake
+        else if(first_room[i] == "Eric" && first_room[i] == "Rabbit"
+                && first_room[i] != "Snake" && first_room[i] == "Bread") {
           move(first_room, second_room, "Eric", "Bread");
           continue;
         }
 
-        //Rabbit --- Eric, Bread, Snake           -> Rabbit, Eric --- Bread, Snake
-        else if(first_room[i] != "Eric" && first_room[i] == "Rabbit" && first_room[i] != "Snake" && first_room[i] != "Bread") {
+        //Rabbit --- Eric, Bread, Snake       -> Rabbit, Eric --- Bread, Snake
+        else if(first_room[i] != "Eric" && first_room[i] == "Rabbit"
+                && first_room[i] != "Snake" && first_room[i] != "Bread") {
           move(second_room, first_room, "Eric");
           continue;
         }
 
-        //Rabbit, Eric --- Bread, Snake            -> ---Eric, Rabbit, Bread, Snake
-        else if(first_room[i] == "Eric" && first_room[i] == "Rabbit" && first_room[i] != "Snake" && first_room[i] != "Bread") {
+        //Rabbit, Eric --- Bread, Snake        -> ---Eric, Rabbit, Bread, Snake
+        else if(first_room[i] == "Eric" && first_room[i] == "Rabbit"
+                && first_room[i] != "Snake" && first_room[i] != "Bread") {
           move(first_room, second_room, "Eric", "Rabbit");
           continue;
         }
