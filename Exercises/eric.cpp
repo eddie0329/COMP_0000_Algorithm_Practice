@@ -5,18 +5,20 @@ using namespace std;
 
 
 //moving elements, located in first_room, to second_room
-void move(vector <string> &origin_room, vector <string> &dest_room, string element_to_move_1 = "", string element_to_move_2 = "") {
-  for(int i = 0; i < origin_room.size(); i++) {
-    if(origin_room[i] == element_to_move_1 || origin_room[i] == element_to_move_2) {
-      dest_room.push_back(origin_room[i]);
-    }
-  }
-  for(int i = 0; i < origin_room.size(); i++) {
-    for(int j =0; j < dest_room.size(); j++) {
-      if(origin_room[i] == dest_room[j]) {
-        origin_room.erase(origin_room.begin() + i);
+void move(vector <string> &origin_room, vector <string> &dest_room,
+   string element_to_move_1 = "", string element_to_move_2 = "") {
+    for(int i = 0; i < origin_room.size(); i++) {
+      if(origin_room[i] == element_to_move_1 || origin_room[i] ==
+        element_to_move_2) {
+        dest_room.push_back(origin_room[i]);
       }
     }
+    for(int i = 0; i < origin_room.size(); i++) {
+      for(int j =0; j < dest_room.size(); j++) {
+        if(origin_room[i] == dest_room[j]) {
+          origin_room.erase(origin_room.begin() + i);
+        }
+      }
   }
 }
 
