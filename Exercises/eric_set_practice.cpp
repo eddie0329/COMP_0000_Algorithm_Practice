@@ -52,6 +52,7 @@ int main() {
   set<string>::iterator it2 = second_room.begin();
 
   move_all(first_room, second_room, "Eric", "Rabbit", "Snake", "Bread");
+
   search(first_room, "Bread");
 
 
