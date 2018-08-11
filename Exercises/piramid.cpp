@@ -4,11 +4,12 @@
 using namespace std;
 
 void make_tree() {
+  int tree[5][7];
   for(int col = 1; col < 6; col++) {
     for(int row = 1; row < 8; row++) {
       cout<<" ";
       if(col == 1 && row == 4) {
-        cout<<"'1'";
+        cout<<"1";
       }
       else if(col == 3 && row == 2) {
         cout<<"2";
@@ -35,6 +36,7 @@ void make_tree() {
 
 void breath_search(int element_to_search) {
   make_tree();
+
 
 }
 void depth_search(int element_to_search) {
