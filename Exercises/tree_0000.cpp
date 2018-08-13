@@ -39,28 +39,40 @@ void display(Node *head) {
 }
 
 int depth_search(Node *head, int element_to_search) {
+  stack<int> stack;
+  int data = head->data;
+  stack.push(data);
 
+  if(data == element_to_search) {
+    cout<<data<<endl;
+  }
+  else {
+    data = head->p_left_link->data;
+    stack.push(data);
+  }
 }
 
 int breath_search(Node *head, int element_to_search) {
-  Node *p = head;
 
 }
 
 int main () {
-
-  Node *tree = create_node(1);
+  //    1
+  //  2   3
+  // 4 5 6 7
   Node *head = create_node(1);
+  Node *node1 = create_node(1);
+  Node *node2 = create_node(2);
+  Node *node3 = create_node(3);
+  Node *node4 = create_node(4);
+  Node *node5 = create_node(5);
+  Node *node6 = create_node(6);
+  Node *node7 = create_node(7);
 
-
-  Node *p = create_node(1);
-  insert_node_left(p, create_node(2));
-  insert_node_right(p, create_node(3));
-  p = create_node(2);
-  insert_node_left(p, create_node(4));
-  insert_node_left(p, create_node(5));
-  p = create_node(3);
-  insert_node_left(p, create_node(6));
-  insert_node_left(p, create_node(7));
-  display(head);
+  insert_node_left(node1, node2);
+  insert_node_right(node1, node3);
+  insert_node_left(node2, node4);
+  insert_node_right(node2, node5);
+  insert_node_left(node3, node6);
+  insert_node_right(node3, node7);
 }
