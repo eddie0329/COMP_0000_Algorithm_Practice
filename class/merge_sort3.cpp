@@ -22,11 +22,13 @@ int *merge_sort(int *array, int start, int end) {
       count++;
       t++;
     }
+
     if(b[t] > c[k]) {
       array[count] = c[k];
       count++;
       k++;
     }
+
   }
 
   return array;
