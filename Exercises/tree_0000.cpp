@@ -43,12 +43,18 @@ int depth_search(Node *head, int element_to_search) {
   int data = head->data;
   stack.push(data);
 
+  for(int i = 0; i < 10; i++) {
+    
+  }
+
+
   if(data == element_to_search) {
     cout<<data<<endl;
   }
   else {
     data = head->p_left_link->data;
     stack.push(data);
+
   }
 }
 

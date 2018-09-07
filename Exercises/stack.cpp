@@ -5,5 +5,4 @@ int main() {
   stack<int> s;
   s.push(1);
   s.pop();
-  cout<<s<endl;
 }
